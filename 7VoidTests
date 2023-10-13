@@ -1,0 +1,25 @@
+using BCRTests.Fundamentals;
+
+namespace BCRTest.UnitTest
+{
+    public class ErrorLoggerTests
+    {
+
+        [SetUp]
+        public void Setup()
+        {
+            
+        }
+
+        [Test]
+        public void Log_WhenCalled_SetTheLastErrorProperty()
+        {
+            var logger = new ErrorLogger();
+
+            logger.Log("a");
+
+            Assert.That(logger.LastError, Is.EqualTo("a"));
+        }
+
+    }
+}
