@@ -1,0 +1,27 @@
+using BCRTests.Fundamentals;
+
+namespace BCRTest.UnitTest
+{
+    public class HtmlFormatterTest
+    {
+        [SetUp]
+        public void Setup()
+        {
+           
+        }
+
+        [Test]
+        public void FormatAsBold_WhenCalled_ShouldEncloseTheStringWithStrongElement()
+        {
+            var formatter = new HtmlFormatter();
+
+            var result = formatter.FormatAsBold("abc");
+
+            Assert.That(result, Does.StartWith("<strong>").IgnoreCase);
+            Assert.That(result, Does.EndWith("</strong>"));
+            Assert.That(result, Does.Contain("abc"));
+        }
+
+
+    }
+}
