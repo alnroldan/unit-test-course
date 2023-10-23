@@ -1,0 +1,2 @@
+
+var string = new FileReader().Read("video.txt");
