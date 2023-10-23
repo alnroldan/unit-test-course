@@ -16,3 +16,28 @@ public static void Main()
     var service = new videoService();
     service.ReadVideoTitle( new FileReader());
 }
+
+
+--------........................Test mocking folder
+
+
+using Nunit.Framework;
+
+namespace Core.UnitTests
+{
+    public class VideoServiceTests
+    {
+        [Test]
+        public void ReadVideoTitle_EmptyFile_ReturnError()
+        {
+            var service = new VideoService();
+
+            var result = service.ReadVideoTitle(new FakeFileReader());
+
+            Assert.That(result, Does.Contain("error").IgnoreCase);
+
+        }
+
+    }
+
+}
