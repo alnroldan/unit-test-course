@@ -1,0 +1,18 @@
+public string ReadVideoTitle(IFileReader fileReader)
+{
+    var str = fileReader.Read("video.txt");
+    .......
+
+}
+
+
+
+............................ class program simulate DI Framework
+
+public class Program 
+
+public static void Main()
+{
+    var service = new videoService();
+    service.ReadVideoTitle( new FileReader());
+}
