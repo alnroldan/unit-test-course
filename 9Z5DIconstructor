@@ -23,5 +23,14 @@ public VideoService ()
 --unificando el constructor con el parametro opcional
 
 public VideoService (IFileReader filereader = null)
+{
+    _fileReader = fileReader ?? new FileReader();
+}
+
+
+---- unit test
+
+
+  var service = new VideoService (new FakeReader)
 
 
