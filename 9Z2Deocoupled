@@ -1,0 +1,14 @@
+using System.IO;
+
+namespace BCRTests.Mocking
+{
+    public class FileReader
+    {
+       public string Read(string path)
+       {
+            File.ReadAllText(path)
+        
+       }
+    }
+
+}
