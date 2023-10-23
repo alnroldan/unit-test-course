@@ -1,0 +1,15 @@
+using TestNinja.Mocking;
+
+namespace Core.UnitTests
+{
+    public class FakeFileReader : IFileReader
+    {
+        public string Read(string path)
+        {
+            return "";
+        }
+
+    }
+
+}
+
