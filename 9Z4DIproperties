@@ -1,0 +1,24 @@
+public class VideoService
+{
+    public IFileReader FileReader { get; set; }
+
+    public VideoService()
+    {
+        FileReader = new FileReader();
+    }
+
+    public string ReadVideoTitle()
+    {
+        var str = FileReader.Read("video.txt");
+    }
+}
+
+
+--- arreglar el program y el test
+
+parte del test
+
+var service = new VideoService();
+
+service.FileReader = new FakeFileReader();
+........
