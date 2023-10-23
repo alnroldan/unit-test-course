@@ -1,0 +1,27 @@
+-..... video service
+
+private IFileReader _fileReader;
+
+
+p
+
+public VideoService(IFileReader fileReader)
+{
+    _fileReader = fileReader;
+}
+
+
+---- arregar program pero se lo hace en video Service
+--- se agrega el constructor sin parámetros
+
+public VideoService ()
+{
+    _fileReader = new FileReader();
+}
+
+
+--unificando el constructor con el parametro opcional
+
+public VideoService (IFileReader filereader = null)
+
+
